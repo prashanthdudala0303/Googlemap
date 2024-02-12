@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Google Maps Widget</title>
+    <style>
+        #map {
+            height: 400px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div id="map"></div>
+    <script>
+        function initMap() {
+            // The location of Somajiguda Fortune 9 building
+            var somajigudaLatLng = {lat: 17.4239, lng: 78.4538};
+
+            // The map, centered at the location
+            var map = new google.maps.Map(
+                document.getElementById('map'), {zoom: 15, center: somajigudaLatLng});
+
+            // The marker, positioned at the location
+            var marker = new google.maps.Marker({position: somajigudaLatLng, map: map});
+        }
+    </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBfoS85xuTkTzpuqDWmq1oYrTYtBaVy_DY&callback=initMap"></script>
+</body>
+</html>
